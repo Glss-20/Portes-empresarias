@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Porte Empresarial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc32d69187c09272d2ccb4e698c1838780654292")]
 [assembly: System.Reflection.AssemblyProductAttribute("Porte Empresarial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Porte Empresarial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

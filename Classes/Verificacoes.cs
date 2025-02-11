@@ -10,7 +10,7 @@ namespace Porte_Empresarial
 {
 	public class Verificacoes
 	{
-		public void Faturamento (Empresas empresas)
+		public void ValoresFat(Empresas empresas)
 		{
             double total = 0;
             int cont = 0;
@@ -31,7 +31,7 @@ namespace Porte_Empresarial
             empresas.FaturamentoAnual = total;
         }
 
-        public void VerificarFaturamento(Empresas empresas)
+        public void PorteFat(Empresas empresas)
         {
             double fat = empresas.FaturamentoAnual;
 
@@ -47,7 +47,7 @@ namespace Porte_Empresarial
                 }
                 else if (fat > 360000 && fat <= 4800000)
                 {
-                    empresas.Porte = "empresas de pequeno porte- EPP";
+                    empresas.Porte = "Empresas de pequeno porte - EPP";
                 }
                 else if (fat > 4800000 && fat <= 300000000)
                 {
@@ -66,6 +66,37 @@ namespace Porte_Empresarial
             catch (FormatException)
             {
                 Console.WriteLine("Valor do faturamento incompatível");
+            }
+        }
+
+        public void VerificarRegime(Empresas empresas)
+        {
+            string regime = empresas.Regime;
+            try
+            {
+                if (regime == "Simples Nacional")
+                {
+                    Console.WriteLine($"Regime: {empresas.Regime} \nA empresa pode se enquadrar nos portes: " +
+                        $"Microempreendedor | Microempresa - ME | Empresas de pequeno porte - EPP\n");
+                }
+                else if (regime == "Lucro Presumido")
+                {
+                    Console.WriteLine($"Regime: {empresas.Regime} \nA empresa pode se enquadrar nos portes: " +
+                        $" Empresas de pequeno porte - EPP | Médio Porte\n");
+                }
+                else if (regime == "Lucro Real")
+                {
+                    Console.WriteLine($"Regime: {empresas.Regime} \nA empresa pode se enquadrar nos portes: " +
+                        $"Médio Porte | Grande porte\n");
+                }
+                else
+                {
+                    Console.WriteLine("REGIME INVÁLIDO!");
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error");
             }
         }
     }

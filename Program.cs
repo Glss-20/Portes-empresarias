@@ -9,10 +9,10 @@ namespace Porte_Empresarial
         {
             Empresas empresa = new Empresas();
             empresa.TelaInicial();
+            empresa.TelaSecundaria();
 
-            Console.ReadLine(); // Aguarda a interação do usuário antes de fecha
+            //Console.ReadLine(); // Aguarda a interação do usuário antes de fecha
 
-            Verificacoes verificacoes = new Verificacoes();
         }
     }
 }
